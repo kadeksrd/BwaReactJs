@@ -61,3 +61,36 @@
   background: rgb(244, 173, 147);
   transition: all 0.8s;
 }
+
+.Review-box{
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 108px;
+}
+
+.Review-box img{
+  width : 80px;
+  height: 80px;
+  border-radius: 50%;
+  float: left; 
+  margin-right: 16px; 
+}
+.Review-box h2{
+  margin-top: 50px;
+}
+
+.Review-box .user p, h3 {
+  margin: 0;
+}
+
+.Review-box .user h3{
+  padding-top : 10px;
+  margin-bottom: 8px;
+}
+
+.Review-box .item{
+  width: 80%;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
