@@ -28,7 +28,7 @@ function FotoProduk() {
 // conditional rendering
 function CheckDiscount (props){
   const { isDiscount } = props;
-
+  
   if(isDiscount == `yes`){
    return (
       <p>Diskon 50% off</p>
@@ -37,18 +37,24 @@ function CheckDiscount (props){
   else if (isDiscount == "comming"){
     return (
       <p>Comming Soon</p>
-    );
+    )
   }
 
 }
+
+const test = 1;
 
 // Buat Object/ Halaman Baru
   // membuat object category dengan props 
 
 function ProdukInfo(props) {
-  const { category, name, isDiscount} = props; 
+  const { category, name, isDiscount } = props; 
   const price = `74.000.000`;
   const benefits = ["Tidak Kusut Terkena Air", "Bahan Lebih Halus", "Tidak Gerak"]
+  const listItems = benefits.map((benefits) => 
+    <li>{benefits}</li>
+  )
+  
   return (
     <div>
       <div className="Deskripsi">
@@ -60,6 +66,9 @@ function ProdukInfo(props) {
           One Of the most recognizable shoes in the AJ Collection, The Converse features
           lightWeight, Visible cushioning just like the original from '88. Signature Details and Materials Celebrate The game-changing icon'
         </p>
+        <ul>
+          <li>{listItems}</li>
+        </ul>
         <a onClick={(e) => TambahCart(name,e)} href="#"> Add to Cart</a>
       </div>
     </div>
