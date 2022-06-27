@@ -44,13 +44,6 @@ function Reviews() {
     );
   };
   
-  function FotoProduk() {
-    return (
-      <div className="Foto">
-        <img src="https://images.pexels.com/photos/2812474/pexels-photo-2812474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-      </div>
-    );
-  }
 
   
   export default Reviews;
