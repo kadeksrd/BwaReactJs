@@ -3,6 +3,8 @@ import React from "react";
 import "./App.css";
 import "./Reviews"
 import Reviews from "./Reviews";
+import PropTypes from 'prop-types'; // ES6
+ 
 
 
 function App() {
@@ -20,10 +22,10 @@ function App() {
 // menambahkan diskon
 // conditional rendering
 function CheckDiscount(props) {
-  const { isDiscount } = props;
+  const { isDiscount, discount} = props;
 
   if (isDiscount == `yes`) {
-    return <p>Diskon 50% off</p>;
+    return <p>Diskon {discount}% off</p>;
   } else if (isDiscount == "comming") {
     return <p>Comming Soon</p>;
   }
@@ -58,7 +60,7 @@ function ProdukInfo(props) {
         <p className="Cate">{category}</p>
         <h1 className="Title">{name}</h1>
         <p className="Price">IDR {price}</p>
-        <CheckDiscount isDiscount={isDiscount} />
+        <CheckDiscount isDiscount={isDiscount} discount={50} />
         <p className="Info">
           One Of the most recognizable shoes in the AJ Collection, The Converse
           features lightWeight, Visible cushioning just like the original from
@@ -82,5 +84,14 @@ function ProdukInfo(props) {
 function TambahCart(e) {
   return alert(`Berhasil Membeli Product ${e}`);
 }
+
+// propstypes memaksa jenis variabel tertentu 
+
+// jadikan diskon itu string padahal sudah di set int hasilnyua 
+
+// CheckDiscount.propTypes = {
+
+//   discount: PropTypes.string;
+// }
 
 export default App;
